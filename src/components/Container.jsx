@@ -75,8 +75,10 @@ function Form(props) {
   const { onNameChange, onAgeChange, onFormSubmit } = props;
   const { name, age } = props.friendForm;
   const isDisabled = () => {
-    // retruns either true or false
-    // implemenet!!!!!
+    if (!name || !age) {
+      return true;
+    }
+    return false;
   };
 
   return (
