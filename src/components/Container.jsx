@@ -52,10 +52,12 @@ export default function Container() {
   return (
     <div className='container-hello-world'>
       <Form
+        // handlers that can change app state
         onNameChange={onNameChange}
         onAgeChange={onAgeChange}
-        friendForm={friendForm}
         onFormSubmit={onFormSubmit}
+        // data we need to hydrate the form inputs
+        friendForm={friendForm}
       />
       {
         friendsList.map(friend => (
