@@ -37,22 +37,19 @@ function Form(props) {
   // its basic functions of updating fields and submitting?
 
   return (
-    <div>
-      <form>
-        <label htmlFor='nameInput'>Name</label>
-        <input id='nameInput' type='text' />
+    <form>
+      <label htmlFor='nameInput'>Name</label>
+      <input id='nameInput' type='text' />
 
-        <label htmlFor='ageInput'>Age</label>
-        <input id='ageInput' type='text' />
+      <label htmlFor='ageInput'>Age</label>
+      <input id='ageInput' type='text' />
 
-
-        <button
-          disabled={false}
-          onClick={e => e.preventDefault()}
-        >
-          submit
+      <button
+        disabled={false}
+        onClick={e => e.preventDefault()}
+      >
+        submit
         </button>
-      </form>
-    </div>
+    </form>
   );
 }
