@@ -46,6 +46,7 @@ export default function Container() {
     };
     const newFriendsList = friendsList.concat(newFriend);
     setFriendsList(newFriendsList);
+    setFriendForm(initialFriendForm);
   };
 
   return (
