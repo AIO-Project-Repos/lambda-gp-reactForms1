@@ -38,7 +38,14 @@ export default function Container() {
   };
 
   const onFormSubmit = e => { // we DO need the event object
-    // ADD A NEW FRIEND TO friendsList !!!!!!!!!
+    e.preventDefault();
+    const newFriend = {
+      id: uuid(),
+      name: friendForm.name,
+      age: friendForm.age,
+    };
+    const newFriendsList = friendsList.concat(newFriend);
+    setFriendsList(newFriendsList);
   };
 
   return (
