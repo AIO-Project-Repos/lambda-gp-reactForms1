@@ -74,6 +74,10 @@ function Form(props) {
   // its basic functions of updating fields and submitting?
   const { onNameChange, onAgeChange, onFormSubmit } = props;
   const { name, age } = props.friendForm;
+  const isDisabled = () => {
+    // retruns either true or false
+    // implemenet!!!!!
+  };
 
   return (
     <form>
@@ -94,7 +98,7 @@ function Form(props) {
       />
 
       <button
-        disabled={false}
+        disabled={isDisabled()}
         onClick={onFormSubmit}
       >
         submit
