@@ -33,7 +33,10 @@ export default function Container() {
 
   return (
     <div className='container-hello-world'>
-      <Form />
+      <Form
+        onNameChange={onNameChange}
+        onAgeChange={onAgeChange}
+      />
       {
         friendsList.map(friend => (
           <h5 key={friend.id}>
