@@ -22,7 +22,7 @@ export default function Container() {
   const [friendForm, setFriendForm] = useState(initialFriendForm);
 
   const onNameChange = e => {
-    // we have the new value for the input inside e.target.value
+    // we have the new value for the name input inside e.target.value
     setFriendForm({
       name: e.target.value,
       age: friendForm.age,
@@ -30,7 +30,7 @@ export default function Container() {
   };
 
   const onAgeChange = e => {
-    // we have the new value for the input inside e.target.value
+    // we have the new value for the age input inside e.target.value
     setFriendForm({
       name: friendForm.name,
       age: e.target.value,
