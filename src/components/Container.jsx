@@ -21,6 +21,14 @@ export default function Container() {
   const [friendsList, setFriendsList] = useState(initialFriendsList);
   const [friendForm, setFriendForm] = useState(initialFriendForm);
 
+  const onNameChange = e => {
+    // you
+  };
+
+  const onAgeChange = e => {
+    // you
+  };
+
   return (
     <div className='container-hello-world'>
       <Form />
