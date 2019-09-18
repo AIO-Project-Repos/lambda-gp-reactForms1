@@ -42,6 +42,7 @@ export default function Container() {
       <Form
         onNameChange={onNameChange}
         onAgeChange={onAgeChange}
+        friendForm={friendForm}
       />
       {
         friendsList.map(friend => (
@@ -58,15 +59,16 @@ function Form(props) {
   // what data does the form need to populate itself?
   // what callbacks does the form need to perform
   // its basic functions of updating fields and submitting?
-  const { onNameChange, onAgeChange } = props;
+  const { onNameChange, onAgeChange, friendForm } = props;
+  const { name, age } = friendForm;
 
   return (
     <form>
       <label htmlFor='nameInput'>Name</label>
-      <input onChange={onNameChange} id='nameInput' type='text' />
+      <input value={name} onChange={onNameChange} id='nameInput' type='text' />
 
       <label htmlFor='ageInput'>Age</label>
-      <input onChange={onAgeChange} id='ageInput' type='text' />
+      <input value={age} onChange={onAgeChange} id='ageInput' type='text' />
 
       <button
         disabled={false}
