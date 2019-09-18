@@ -6,18 +6,26 @@ const initialFriendsList = [
   // why is it useful to have a unique id?
   { id: uuid(), name: 'gabe', age: 42 },
   { id: uuid(), name: 'luke', age: 22 },
-  { id: uuid(), name: 'josh', age: 32 },
+  { id: uuid(), name: 'josh', age: 52 },
 ];
+
+const initialFriendForm = {
+  name: '',
+  age: '',
+};
 
 export default function Container() {
   // what state does this app need
   // in order to display friends,
   // and keep track of the state of the form?
+  const [friendsList, setFriendsList] = useState(initialFriendsList);
+  const [friendForm, setFriendForm] = useState(initialFriendForm);
+
   return (
     <div className='container-hello-world'>
       <Form />
       {
-        initialFriendsList.map(friend => (
+        friendsList.map(friend => (
           <h5 key={friend.id}>
             {friend.name} is {friend.age} years old.
           </h5>
@@ -26,10 +34,6 @@ export default function Container() {
     </div>
   );
 }
-
-const initialFormData = {
-  // sensible initial values?
-};
 
 function Form(props) {
   // what data does the form need to populate itself?
@@ -49,7 +53,7 @@ function Form(props) {
         onClick={e => e.preventDefault()}
       >
         submit
-        </button>
+      </button>
     </form>
   );
 }
