@@ -37,7 +37,7 @@ export default function Container() {
     });
   };
 
-  const onFormSubmit = e => { // we don't need the event object
+  const onFormSubmit = e => { // we DO need the event object
     // ADD A NEW FRIEND TO friendsList !!!!!!!!!
   };
 
