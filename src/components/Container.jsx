@@ -70,10 +70,20 @@ function Form(props) {
   return (
     <form>
       <label htmlFor='nameInput'>Name</label>
-      <input value={name} onChange={onNameChange} id='nameInput' type='text' />
+      <input
+        value={name}
+        onChange={onNameChange}
+        id='nameInput'
+        type='text'
+      />
 
       <label htmlFor='ageInput'>Age</label>
-      <input value={age} onChange={onAgeChange} id='ageInput' type='text' />
+      <input
+        value={age}
+        onChange={onAgeChange}
+        id='ageInput'
+        type='text'
+      />
 
       <button
         disabled={false}
