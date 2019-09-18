@@ -52,14 +52,15 @@ function Form(props) {
   // what data does the form need to populate itself?
   // what callbacks does the form need to perform
   // its basic functions of updating fields and submitting?
+  const { onNameChange, onAgeChange } = props;
 
   return (
     <form>
       <label htmlFor='nameInput'>Name</label>
-      <input id='nameInput' type='text' />
+      <input onChange={onNameChange} id='nameInput' type='text' />
 
       <label htmlFor='ageInput'>Age</label>
-      <input id='ageInput' type='text' />
+      <input onChange={onAgeChange} id='ageInput' type='text' />
 
       <button
         disabled={false}
