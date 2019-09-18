@@ -64,8 +64,8 @@ function Form(props) {
   // what data does the form need to populate itself?
   // what callbacks does the form need to perform
   // its basic functions of updating fields and submitting?
-  const { onNameChange, onAgeChange, friendForm, onFormSubmit } = props;
-  const { name, age } = friendForm;
+  const { onNameChange, onAgeChange, onFormSubmit } = props;
+  const { name, age } = props.friendForm;
 
   return (
     <form>
