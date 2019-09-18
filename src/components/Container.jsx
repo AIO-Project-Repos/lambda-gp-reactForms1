@@ -96,7 +96,7 @@ function Form(props) {
         value={age}
         onChange={onAgeChange}
         id='ageInput'
-        type='text'
+        type='number'
       />
 
       <button
