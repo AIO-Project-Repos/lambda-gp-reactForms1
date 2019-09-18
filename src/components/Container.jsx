@@ -37,12 +37,17 @@ export default function Container() {
     });
   };
 
+  const onFormSubmit = e => { // we don't need the event object
+
+  };
+
   return (
     <div className='container-hello-world'>
       <Form
         onNameChange={onNameChange}
         onAgeChange={onAgeChange}
         friendForm={friendForm}
+        onFormSubmit={onFormSubmit}
       />
       {
         friendsList.map(friend => (
@@ -59,7 +64,7 @@ function Form(props) {
   // what data does the form need to populate itself?
   // what callbacks does the form need to perform
   // its basic functions of updating fields and submitting?
-  const { onNameChange, onAgeChange, friendForm } = props;
+  const { onNameChange, onAgeChange, friendForm, onFormSubmit } = props;
   const { name, age } = friendForm;
 
   return (
@@ -72,7 +77,7 @@ function Form(props) {
 
       <button
         disabled={false}
-        onClick={e => e.preventDefault()}
+        onClick={onFormSubmit}
       >
         submit
       </button>
