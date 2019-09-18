@@ -85,6 +85,7 @@ function Form(props) {
     <form>
       <label htmlFor='nameInput'>Name</label>
       <input
+        maxLength={50}
         value={name}
         onChange={onNameChange}
         id='nameInput'
