@@ -51,6 +51,11 @@ export default function Container() {
 
   return (
     <div className='container-hello-world'>
+
+      {
+        !friendForm.name && <div>WRITE A NAME WILL YA</div>
+      }
+
       <Form
         // handlers that can change app state
         onNameChange={onNameChange}
