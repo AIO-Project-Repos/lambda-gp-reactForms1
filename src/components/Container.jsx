@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import uuid from 'uuid';
 import './Container.less';
 
-const initialFriendsData = [
+const initialFriendsList = [
   // why is it useful to have a unique id?
   { id: uuid(), name: 'gabe', age: 42 },
   { id: uuid(), name: 'luke', age: 22 },
@@ -17,7 +17,7 @@ export default function Container() {
     <div className='container-hello-world'>
       <Form />
       {
-        initialFriendsData.map(friend => (
+        initialFriendsList.map(friend => (
           <h5 key={friend.id}>
             {friend.name} is {friend.age} years old.
           </h5>
